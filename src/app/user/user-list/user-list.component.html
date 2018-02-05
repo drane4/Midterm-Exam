@@ -5,7 +5,7 @@
 
 
 <button class="button is-success" (click)="createUser()" [disabled]="content?.length < 2 || content?.length > 200">
-  Add Note
+  Add User
 </button>
 <hr>
 <div *ngFor="let note of notes | async">

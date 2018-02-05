@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { UserService } from '../User.service';
+import { UserService } from '../user.service';
 
-import { User } from '../User-model';
+import { User } from '../user-model';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss'],
 })
-export class UsersListComponent implements OnInit {
+export class UserListComponent implements OnInit {
 
   Users: Observable<User[]>;
   content: string;
