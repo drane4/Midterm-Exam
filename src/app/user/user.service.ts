@@ -7,7 +7,7 @@ import { User } from './user-model';
 import { Observable } from 'rxjs/Observable';
 import { map } from 'rxjs/operators';
 
-interface Newuser {
+interface NewUser {
   content: string;
   hearts: 0;
   time: number;
@@ -37,7 +37,7 @@ export class UserService {
     });
   }
 
-  getuser(id: string) {
+  getUser(id: string) {
     return this.afs.doc<User>(`users/${id}`);
   }
 
@@ -50,11 +50,11 @@ export class UserService {
     return this.usersCollection.add(user);
   }
 
-  updateuser(id: string, data: Partial<User>) {
-    return this.getuser(id).update(data);
+  updateUser(id: string, data: Partial<User>) {
+    return this.getUser(id).update(data);
   }
 
-  deleteuser(id: string) {
-    return this.getuser(id).delete();
+  deleteUser(id: string) {
+    return this.getUser(id).delete();
   }
 }

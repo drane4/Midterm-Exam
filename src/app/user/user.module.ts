@@ -15,6 +15,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   imports: [
     CommonModule,
     FormsModule,
+    UserModule,
     SharedModule,
     AngularFirestoreModule.enablePersistence(),
   ],
@@ -24,4 +25,4 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
   ],
   providers: [UserService],
 })
-export class usersModule { }
+export class UserModule { }

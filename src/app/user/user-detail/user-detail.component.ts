@@ -5,9 +5,9 @@ import { UserService } from '../User.service';
 import { User } from '../User-model';
 
 @Component({
-  selector: 'User-detail',
-  templateUrl: './User-detail.component.html',
-  styleUrls: ['./User-detail.component.scss'],
+  selector: 'user-detail',
+  templateUrl: './user-detail.component.html',
+  styleUrls: ['./user-detail.component.scss'],
 })
 export class UserDetailComponent {
 
@@ -18,14 +18,14 @@ export class UserDetailComponent {
 
   addHeartToUser(val: number) {
     if (this.User.id) {
-      this.UserService.updateuser(this.User.id, { hearts: val + 1 });
+      this.UserService.updateUser(this.User.id, { hearts: val + 1 });
     } else {
       console.error('User missing ID!');
     }
   }
 
   deleteUser(id: string) {
-    this.UserService.deleteuser(id);
+    this.UserService.deleteUser(id);
   }
 
 }
